@@ -12,18 +12,20 @@ Original Github Project:
 
 ############################################################################
 
-This fork was created for a few reasons.  The first reason is that Webistrano can be very difficult to get
-running without pulling in the proper changes across various github project and applying them to the master 
-project, which has stopped taking pull requests.
+This fork was created for a few reasons.  The first reason is that Webistrano can
+be very difficult to get running without pulling in the proper changes across
+various github project and applying them to the master project, which has stopped 
+taking pull requests.
 
-Another reason is that I have found Webistrano can be extremely difficult to install.  I wanted to
-document my process in case it will help anybody else out.
+Another reason is that I have found Webistrano can be extremely difficult to 
+install.  I wanted to document my process in case it will help anybody else out.
 
-Finally, I required a source change that I couldn't find in any other branches -- the UI should
-filter out capistrano tasks that have blank descriptions.  This is because my webistrano 
-setup is doing enterprise deployment for a large compiled codebase and is interfacing with a 
-binary repository (ivy2) using custom scripts that developers also use (ant).  I'm using capistrano only 
-for its ssh remote execution, and the default capistrano tasks don't map to my world.
+Finally, I required a source change that I couldn't find in any other branches --
+the UI should filter out capistrano tasks that have blank descriptions.  This is
+because my webistrano setup is doing enterprise deployment for a large compiled 
+codebase and is interfacing with a binary repository (ivy2) using custom scripts
+that developers also use (ant).  I'm using capistrano only for its ssh remote
+execution, and the default capistrano tasks don't map to my world.
 
 The following is my shell script and notes to install webistrano.
 
