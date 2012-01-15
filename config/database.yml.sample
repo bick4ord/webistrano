@@ -26,11 +26,11 @@ test:
   database: webistrano_test
   username: root
   password:
-  socket: /tmp/mysql.sock
+  socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql
   database: webistrano_production
   username: root
   password: 
-  socket: /tmp/mysql.sock
+  socket: /var/run/mysqld/mysqld.sock
