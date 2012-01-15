@@ -14,7 +14,15 @@ class StagesController < ApplicationController
   # GET /projects/1/stages/1.xml
   def show
     @stage = current_project.stages.find(params[:id])
-    @task_list = [['All tasks: ', '']] + @stage.list_tasks.collect{|task| [task[:name], task[:name]]}.sort()
+
+    valid_tasks = []
+    @stage.list_tasks.each_with_index do |k, i|
+        if not k[:description].blank?
+            valid_tasks.push(k)
+        end
+    end
+
+    @task_list = [['All tasks: ', '']] + valid_tasks.collect{|task| [task[:name], task[:name]]}.sort()
 
     respond_to do |format|
       format.html # show.rhtml
